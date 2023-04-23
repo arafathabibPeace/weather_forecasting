@@ -38,7 +38,7 @@ const Home = () => {
         getUserData(accessToken)
     }, [accessToken])
 
-    async function getUserData() {
+    const getUserData = async () => {
         await fetch('http://localhost:4000/getUserData', {
             method: 'GET',
             headers: {
@@ -50,6 +50,8 @@ const Home = () => {
             console.log(data)
         })
     }
+
+
     return <div>
         <div>Weather Forecast</div>
 
