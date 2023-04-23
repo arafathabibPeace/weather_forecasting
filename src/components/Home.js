@@ -23,7 +23,6 @@ const Home = () => {
                     console.log('data: ', data)
                     if (data.access_token) {
                         setAccessToken(data.access_token)
-
                         setRerender(!rerender)
                     }
                 }).catch((error) => {
@@ -37,7 +36,7 @@ const Home = () => {
 
     useEffect(() => {
         getUserData(accessToken)
-    }, [getUserData, accessToken])
+    }, [accessToken])
 
     async function getUserData() {
         await fetch('http://localhost:4000/getUserData', {

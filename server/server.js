@@ -8,7 +8,7 @@ var app = express();
 app.use(cors());
 app.use(bodyParser.json());
 const CLIENT_ID = 'df2c553ef299ed4dfee9'
-const CLIENT_SECRET = 'b14758aab6105a16df740d44c663507561712fe8'
+const CLIENT_SECRET = '7ca893626b01713e72ed1c392b266dee71061855'
 
 app.get('/getAccessToken', async function (req, res) {
 
@@ -39,7 +39,6 @@ app.get('/getUserData', async function (req, res) {
     }).then((response) => {
         return response.json()
     }).then((data) => {
-        console.log(data)
         res.json(data)
     })
 })
