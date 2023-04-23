@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
-import { useDispatch, useSelector } from 'react-redux'
-import { authenticateUser } from "../redux/actions";
-import { Button } from "@mui/material";
 
 const Home = () => {
     const [rerender, setRerender] = useState(false)
     const [accessToken, setAccessToken] = useState('')
-    const { user } = useSelector((state) => state.user)
-
-    let dispatch = useDispatch()
 
     useEffect(() => {
         const queryString = window.location.search;
@@ -43,7 +37,7 @@ const Home = () => {
 
     useEffect(() => {
         getUserData(accessToken)
-    },[getUserData,accessToken])
+    }, [getUserData, accessToken])
 
     async function getUserData() {
         await fetch('http://localhost:4000/getUserData', {
@@ -61,8 +55,6 @@ const Home = () => {
         <div>Weather Forecast</div>
 
         <div>Welcome to the weather forecast web application. Please Login with your  Github  user  to use the application and view the weather  in your city</div>
-        {/* {localStorage.getItem("accessToken")?<Logout/>:<Login />} */}
-        {/* <Button onClick={()=>getUserData()}>Get Data</Button> */}
         {accessToken ? <Logout /> : <Login />}
     </div>
 
