@@ -1,11 +1,15 @@
 import { Button } from '@mui/material';
-
-
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from "../redux/action";
+import { Link } from "react-router-dom";
 const Logout = () => {
-
-    return <div>
-        <Button variant="contained">Logout</Button>
-    </div>
+    let dispatch = useDispatch()
+    const logouthandler = () => {
+        dispatch(logout())
+    }
+    return <>
+        <Button variant="contained" onClick={logouthandler}>Logout</Button>
+    </>
 
 }
 

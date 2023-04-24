@@ -1,31 +1,91 @@
 .header {
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 60%;
     padding: 1%;
-    height: 40%;
     border-bottom: 1px solid black;
-    
 }
 .content {
-    height: 60%;    
+    height: 40%;
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 5%;
+    padding-top: 5%;
 }
 
 .button {
     margin-top: 3%;
 }
 
-.logo{
+.logout {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.logo {
     height: 30px;
 }
 
-.title{
+.title {
     font-weight: bolder;
     font-size: larger;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     padding-left: 10px;
+}
+
+.user {
+    font-weight: bolder;
+    font-size: large;
+    padding-bottom: 10%;
+}
+.user_name {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding-bottom: 5%;
+}
+.user_htmlUrl {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding-bottom: 2%;
+}
+
+.searchbar {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+.searhButton {
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+a {
+    background-color: white;
+    border: 2px black solid;
+    color: black;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: medium;
+    
+}
+
+.forecast {
+    padding-top: 2%;
+}
+
+.result {
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    overflow: hidden;
+}
+.result2 {
+    overflow: hidden;
 }
