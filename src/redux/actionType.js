@@ -1,0 +1,6 @@
+export const GET_USER = 'GET_USER'
+export const GET_USER_DETAILS = 'GET_USER_DETAILS'
+export const GET_CITY_DETAILS = 'GET_CITY_DETAILS'
+export const GET_FORECAST_DETAILS = 'GET_FORECAST_DETAILS'
+export const LOGOUT = 'LOGOUT'
+export const LOGIN = 'LOGIN'
